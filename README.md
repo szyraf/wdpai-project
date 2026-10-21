@@ -16,6 +16,7 @@ Projekt na Projektowanie aplikacji internetowych. Opis pojawi się po wyborze te
 git clone https://github.com/szyraf/wdpai-project.git
 cd wdpai-project
 docker compose up --build -d
+docker compose exec php composer dump-autoload
 ```
 
 Aplikacja: http://localhost:8080
