@@ -1,26 +1,17 @@
-# wdpai-project
+# Zguba PK
 
-Projekt na Projektowanie aplikacji internetowych. Opis pojawi się po wyborze tematu.
-
-## Tech stack
-
-| Warstwa | Technologie |
-|---|---|
-| Backend | PHP 8.3 |
-| Serwer HTTP | Nginx |
-| Konteneryzacja | Docker Compose |
+Aplikacja o rzeczach zgubionych i znalezionych na kampusach Czyżyny i Warszawska Politechniki Krakowskiej.
 
 ## Szybki start
 
 ```bash
 git clone https://github.com/szyraf/wdpai-project.git
 cd wdpai-project
+cp .env.example .env
 docker compose up --build -d
 docker compose exec php composer dump-autoload
 ```
 
 Aplikacja: http://localhost:8080
 
-## Autorzy
-
-- Szymon Rafałowski
+Autor: Szymon Rafałowski.
