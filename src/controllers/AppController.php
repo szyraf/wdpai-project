@@ -15,6 +15,6 @@ abstract class AppController
         }
 
         extract($variables, EXTR_SKIP);
-        require $templatePath;
+        require dirname(__DIR__, 2) . '/public/views/layout.html.php';
     }
 }

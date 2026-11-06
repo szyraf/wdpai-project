@@ -1,0 +1,8 @@
+﻿# Zdjęcia (Wikimedia Commons)
+
+- klucze.jpg: File:Door key from lock type BKS Janus on keyring from company O&K (Orenstein & Koppel).jpg, Pittigrilli, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Door_key_from_lock_type_BKS_Janus_on_keyring_from_company_O%26K_(Orenstein_%26_Koppel).jpg
+- portfel.jpg: File:Leather bi-fold wallet by Eugene Pik (2021) 04.jpg, Eugenepik, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Leather_bi-fold_wallet_by_Eugene_Pik_(2021)_04.jpg
+- sluchawki.jpg: File:Bose QuietComfort 25 Acoustic Noise Cancelling Headphones.jpg, Florian Fuchs, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Bose_QuietComfort_25_Acoustic_Noise_Cancelling_Headphones.jpg
+- parasol.jpg: File:Folding umbrella 01.jpg, Kritzolina, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Folding_umbrella_01.jpg
+- kalkulator.jpg: File:Casio fx-991MS.jpg, Shwangtianyuan, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Casio_fx-991MS.jpg
+- plecak.jpg: File:Eastpak Sugarbush backpack black.jpg, Ubcule, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Eastpak_Sugarbush_backpack_black.jpg

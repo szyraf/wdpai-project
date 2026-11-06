@@ -8,30 +8,34 @@ final class DefaultController extends AppController
 {
     public function index(): void
     {
+        $demo = require dirname(__DIR__) . '/demo.php';
+
         $this->render('home', [
             'pageTitle' => 'Tablica ogłoszeń',
-            'items' => [
-                [
-                    'id' => 1,
-                    'title' => 'Klucze z metalowym brelokiem',
-                    'type' => 'Znalezisko',
-                    'category' => 'Klucze',
-                    'campus' => 'Warszawska',
-                    'place' => 'Budynek Główny, sala 140',
-                    'date' => '2026-11-03',
-                    'storage' => 'Na portierni: Budynek Główny',
-                ],
-                [
-                    'id' => 2,
-                    'title' => 'Legitymacja studencka',
-                    'type' => 'Zguba',
-                    'category' => 'Dokumenty',
-                    'campus' => 'Czyżyny',
-                    'place' => 'Docent Bistro, przy kasie',
-                    'date' => '2026-11-03',
-                    'storage' => null,
-                ],
-            ],
+            'items' => $demo['items'],
+            'categories' => $demo['categories'],
+        ]);
+    }
+
+    public function login(): void
+    {
+        $this->render('login', ['pageTitle' => 'Zaloguj się']);
+    }
+
+    public function register(): void
+    {
+        $this->render('register', ['pageTitle' => 'Załóż konto']);
+    }
+
+    public function admin(): void
+    {
+        $demo = require dirname(__DIR__) . '/demo.php';
+
+        $this->render('admin', [
+            'pageTitle' => 'Panel administratora',
+            'items' => $demo['items'],
+            'categories' => $demo['categories'],
+            'buildings' => $demo['buildings'],
         ]);
     }
 
