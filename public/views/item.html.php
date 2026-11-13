@@ -3,6 +3,7 @@
     <h1><?= htmlspecialchars($pageTitle) ?></h1>
     <p><?= htmlspecialchars($item['type']) ?>, ogłoszenie nr <?= $itemId ?></p>
     <p><?= htmlspecialchars($item['description']) ?></p>
+    <?php require __DIR__ . '/item-photo.html.php'; ?>
     <?php require __DIR__ . '/item-fields.html.php'; ?>
 </article>
 <section aria-labelledby="claim-heading">

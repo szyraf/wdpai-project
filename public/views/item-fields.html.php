@@ -1,21 +1,28 @@
-<?php if ($item['photo'] !== null): ?>
-    <img src="/img/<?= htmlspecialchars($item['photo']) ?>" width="240" height="<?= (int) $item['photoHeight'] ?>" alt="<?= htmlspecialchars($item['photoAlt']) ?>">
-<?php else: ?>
-    <p>Brak zdjęcia. Dane dokumentu nie są publikowane.</p>
-<?php endif; ?>
 <dl>
-    <dt>Kategoria</dt>
-    <dd><?= htmlspecialchars($item['category']) ?></dd>
-    <dt>Kampus</dt>
-    <dd><?= htmlspecialchars($item['campus']) ?></dd>
-    <dt>Miejsce</dt>
-    <dd><?= htmlspecialchars($item['place']) ?></dd>
-    <dt>Data</dt>
-    <dd><time datetime="<?= htmlspecialchars($item['date']) ?>"><?= htmlspecialchars($item['date']) ?></time></dd>
+    <div>
+        <dt>Kategoria</dt>
+        <dd><?= htmlspecialchars($item['category']) ?></dd>
+    </div>
+    <div>
+        <dt>Kampus</dt>
+        <dd><?= htmlspecialchars($item['campus']) ?></dd>
+    </div>
+    <div>
+        <dt>Miejsce</dt>
+        <dd><?= htmlspecialchars($item['place']) ?></dd>
+    </div>
+    <div>
+        <dt>Data</dt>
+        <dd><time datetime="<?= htmlspecialchars($item['date']) ?>"><?= htmlspecialchars($item['date']) ?></time></dd>
+    </div>
     <?php if ($item['storage'] !== null): ?>
-        <dt>Przechowanie</dt>
-        <dd><?= htmlspecialchars($item['storage']) ?></dd>
+        <div>
+            <dt>Przechowanie</dt>
+            <dd><?= htmlspecialchars($item['storage']) ?></dd>
+        </div>
     <?php endif; ?>
-    <dt>Autor</dt>
-    <dd><?= htmlspecialchars($item['author']) ?></dd>
+    <div>
+        <dt>Autor</dt>
+        <dd><?= htmlspecialchars($item['author']) ?></dd>
+    </div>
 </dl>
