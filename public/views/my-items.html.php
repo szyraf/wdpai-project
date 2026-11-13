@@ -29,6 +29,7 @@
                 <article>
                     <h3><a href="/ogloszenia/<?= $id ?>"><?= htmlspecialchars($item['title']) ?></a></h3>
                     <p>Status: <?= htmlspecialchars($status) ?></p>
+                    <?php require __DIR__ . '/item-photo.html.php'; ?>
                     <?php require __DIR__ . '/item-fields.html.php'; ?>
                     <?php if ($status === 'Opublikowane'): ?>
                         <button type="button" disabled>Oznacz jako oddane</button>
