@@ -25,6 +25,7 @@ final class ItemController extends AppController
 
     public function create(): void
     {
+        $this->requireLogin();
         $demo = require dirname(__DIR__) . '/demo.php';
 
         $this->render('item-create', [
@@ -36,6 +37,7 @@ final class ItemController extends AppController
 
     public function mine(): void
     {
+        $this->requireLogin();
         $demo = require dirname(__DIR__) . '/demo.php';
 
         $this->render('my-items', [

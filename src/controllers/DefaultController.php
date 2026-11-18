@@ -17,16 +17,6 @@ final class DefaultController extends AppController
         ]);
     }
 
-    public function login(): void
-    {
-        $this->render('login', ['pageTitle' => 'Zaloguj się']);
-    }
-
-    public function register(): void
-    {
-        $this->render('register', ['pageTitle' => 'Załóż konto']);
-    }
-
     public function admin(): void
     {
         $demo = require dirname(__DIR__) . '/demo.php';

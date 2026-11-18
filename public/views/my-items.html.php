@@ -1,13 +1,12 @@
 <div class="tools">
     <div class="head">
         <div>
-            <p class="kicker">Cześć, Szymon</p>
+            <p class="kicker">Cześć, <?= htmlspecialchars($currentUserName) ?></p>
             <h1><?= htmlspecialchars($pageTitle) ?></h1>
-            <p class="page-lead">Podgląd konta: Szymon. Przykładowe zgłoszenia, bez aktywnej sesji.</p>
+            <p class="page-lead">Zgłoszenia i ogłoszenia poniżej są jeszcze przykładowe.</p>
         </div>
         <div class="head-actions">
             <a class="btn primary" href="/ogloszenia/dodaj">Dodaj ogłoszenie</a>
-            <button class="btn ghost" type="button" disabled>Wyloguj się</button>
         </div>
     </div>
 </div>

@@ -2,12 +2,17 @@
     <div class="note card">
         <p class="kicker">Konto Zguba PK</p>
         <h1><?= htmlspecialchars($pageTitle) ?></h1>
+        <?php if ($registered ?? false): ?>
+            <div class="form-notice" role="status"><p>Konto założone. Możesz się zalogować.</p></div>
+        <?php endif; ?>
+        <?php require __DIR__ . '/form-errors.html.php'; ?>
         <form class="auth-form" method="post" action="/logowanie">
-            <fieldset disabled>
+            <input type="hidden" name="csrfToken" value="<?= htmlspecialchars($csrfToken) ?>">
+            <fieldset>
                 <legend class="sr-only">Dane logowania</legend>
                 <div class="form-row">
                     <label for="email">E-mail</label>
-                    <input class="input" id="email" name="email" type="email" autocomplete="email" required>
+                    <input class="input" id="email" name="email" type="email" autocomplete="email" required value="<?= htmlspecialchars($email ?? '') ?>">
                 </div>
                 <div class="form-row">
                     <label for="password">Hasło</label>
@@ -16,10 +21,6 @@
                 <button class="btn primary" type="submit">Zaloguj się</button>
             </fieldset>
         </form>
-        <details class="example">
-            <summary>Przykład komunikatu przy błędnych danych</summary>
-            <p>E-mail lub hasło jest niepoprawne.</p>
-        </details>
         <p class="alt">Nie masz konta? <a href="/rejestracja">Załóż konto</a>.</p>
     </div>
     <aside class="note card-aside" aria-label="Informacja o koncie">
