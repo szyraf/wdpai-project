@@ -54,6 +54,8 @@ final class Routing
 
     public function dispatch(string $method, string $uri): bool
     {
+        // HEAD to GET bez treści odpowiedzi, więc obsługuje go ta sama trasa.
+        $method = $method === 'HEAD' ? 'GET' : $method;
         $path = parse_url($uri, PHP_URL_PATH) ?: '/';
 
         foreach ($this->routes as $route) {
