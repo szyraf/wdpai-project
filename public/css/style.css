@@ -85,10 +85,11 @@ h1, h2, h3, p, dd, a { overflow-wrap: anywhere; }
 .brand { font-family: var(--f-display); font-weight: 800; font-size: 1.4rem; letter-spacing: -.02em; text-decoration: none; padding-block: var(--s-2); }
 .brand span { color: var(--c-accent); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-1); }
-.site-nav a { display: flex; align-items: center; min-height: 44px; padding: var(--s-2) var(--s-3); border-radius: var(--r-pill); text-decoration: none; font-weight: 500; font-size: .95rem; transition: background-color var(--dur); }
-.site-nav a:hover { background: var(--c-paper); }
+.site-nav a, .site-nav button { display: flex; align-items: center; min-height: 44px; padding: var(--s-2) var(--s-3); border-radius: var(--r-pill); text-decoration: none; font-weight: 500; font-size: .95rem; transition: background-color var(--dur); }
+.site-nav a:hover, .site-nav button:hover { background: var(--c-paper); }
 .site-nav a[aria-current="page"] { background: var(--c-accent-soft); color: var(--c-accent); font-weight: 700; }
-.site-nav .login { border: 1px solid var(--c-control); }
+.site-nav .login, .site-nav button { border: 1px solid var(--c-control); }
+.site-nav button { background: var(--c-white); color: var(--c-ink); }
 
 .tools { padding: var(--s-4) 0 var(--s-6); }
 .head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--s-3); margin-bottom: var(--s-5); }
@@ -187,7 +188,7 @@ h1 { margin: var(--s-1) 0 0; font-family: var(--f-display); font-size: clamp(2re
 
 @media (prefers-reduced-motion: reduce) {
     .note, .note:hover, .note:focus-within { transform: none; transition: none; }
-    .btn, .site-nav a { transition: none; }
+    .btn, .site-nav a, .site-nav button { transition: none; }
 }
 
 /* Podstrony: formularze są jeszcze wyłączone, więc przyciski zachowują wygląd wariantu z prototypu. */
@@ -209,7 +210,6 @@ h1 { margin: var(--s-1) 0 0; font-family: var(--f-display); font-size: clamp(2re
 .input:enabled:hover { border-color: var(--c-ink); }
 .input:focus { border-color: var(--c-accent); }
 .input::placeholder { color: var(--c-ink-soft); opacity: 1; }
-.input[aria-invalid="true"] { border-color: var(--c-accent); border-width: 2px; }
 textarea.input { resize: vertical; }
 .help { margin: var(--s-1) 0 0; font-size: .875rem; color: var(--c-ink-soft); }
 .page-lead { margin: var(--s-2) 0 0; max-width: 40em; color: var(--c-ink-soft); }
@@ -220,7 +220,7 @@ textarea.input { resize: vertical; }
 .form-errors, .form-notice { margin: 0 0 var(--s-4); padding: var(--s-3) var(--s-4); border-left: 4px solid; border-radius: var(--r-sm); font-weight: 700; }
 .form-errors { border-color: var(--c-accent); background: var(--c-accent-soft); color: var(--c-accent-dark); }
 .form-notice { border-color: var(--c-ok); background: var(--c-ok-soft); color: var(--c-ok); }
-.form-errors p, .form-notice p { margin: 0; }
+.form-notice p { margin: 0; }
 .form-errors ul { display: grid; gap: var(--s-1); margin: 0; padding-left: 1.2em; }
 
 .back { margin: var(--s-2) 0 var(--s-4); }
@@ -362,9 +362,6 @@ textarea.input { resize: vertical; }
 .form-row .help { margin: 0; }
 .auth-form .input { border-radius: var(--r-sm); padding: var(--s-3); }
 .auth-form .btn { width: 100%; margin-top: var(--s-2); }
-.example { margin-top: var(--s-3); font-size: .9rem; color: var(--c-ink-soft); }
-.example summary { display: flex; align-items: center; min-height: 44px; }
-.example p { margin: 0 0 var(--s-2); }
 .alt { margin: var(--s-4) 0 0; text-align: center; }
 .alt a { color: var(--c-accent); font-weight: 700; }
 .card-aside { --tilt: 1.5deg; flex: 1 1 260px; max-width: 440px; padding: var(--s-5) var(--s-4) var(--s-4); }

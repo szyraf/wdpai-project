@@ -2,17 +2,19 @@
     <div class="note card">
         <p class="kicker">Konto Zguba PK</p>
         <h1><?= htmlspecialchars($pageTitle) ?></h1>
+        <?php require __DIR__ . '/form-errors.html.php'; ?>
         <form class="auth-form" method="post" action="/rejestracja">
-            <fieldset disabled>
+            <input type="hidden" name="csrfToken" value="<?= htmlspecialchars($csrfToken) ?>">
+            <fieldset>
                 <legend class="sr-only">Dane nowego konta</legend>
                 <div class="form-row">
                     <label for="name">Imię</label>
-                    <input class="input" id="name" name="name" type="text" autocomplete="given-name" maxlength="120" required aria-describedby="name-help">
+                    <input class="input" id="name" name="name" type="text" autocomplete="given-name" maxlength="120" required aria-describedby="name-help" value="<?= htmlspecialchars($form['name'] ?? '') ?>">
                     <p class="help" id="name-help">Na ogłoszeniach widać tylko imię autora.</p>
                 </div>
                 <div class="form-row">
                     <label for="email">E-mail</label>
-                    <input class="input" id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
+                    <input class="input" id="email" name="email" type="email" autocomplete="email" maxlength="255" required aria-describedby="email-help" value="<?= htmlspecialchars($form['email'] ?? '') ?>">
                     <p class="help" id="email-help">Możesz użyć dowolnego adresu e-mail. Kontakt zostanie udostępniony drugiej stronie po zaakceptowaniu zgłoszenia.</p>
                 </div>
                 <div class="form-row">

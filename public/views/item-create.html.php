@@ -4,7 +4,7 @@
             <p class="kicker">Nowa kartka na tablicy</p>
             <h1><?= htmlspecialchars($pageTitle) ?></h1>
         </div>
-        <p class="who">Dodajesz jako <strong>Szymon</strong>. Na tablicy pokażemy tylko Twoje imię.</p>
+        <p class="who">Dodajesz jako <strong><?= htmlspecialchars($currentUserName) ?></strong>. Na tablicy pokażemy tylko Twoje imię.</p>
     </div>
 </div>
 <div class="board add-board">

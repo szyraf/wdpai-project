@@ -4,9 +4,6 @@
             <h1><?= htmlspecialchars($pageTitle) ?></h1>
             <p class="page-lead">Publiczny podgląd panelu na danych demonstracyjnych. Nie przyznaje uprawnień administratora.</p>
         </div>
-        <div class="head-actions">
-            <button class="btn ghost" type="button" disabled>Wyloguj się</button>
-        </div>
     </div>
 </div>
 <div class="board adm">

@@ -16,15 +16,24 @@
                     <li><a href="/ogloszenia"<?php if (in_array($template, ['home', 'item'], true)): ?> aria-current="page"<?php endif; ?>>Ogłoszenia</a></li>
                     <li><a href="/ogloszenia/dodaj"<?php if ($template === 'item-create'): ?> aria-current="page"<?php endif; ?>>Dodaj ogłoszenie</a></li>
                     <li><a href="/moje-ogloszenia"<?php if ($template === 'my-items'): ?> aria-current="page"<?php endif; ?>>Moje ogłoszenia</a></li>
-                    <li><a class="login" href="/logowanie"<?php if ($template === 'login'): ?> aria-current="page"<?php endif; ?>>Zaloguj się</a></li>
+                    <?php if ($currentUserName === null): ?>
+                        <li><a class="login" href="/logowanie"<?php if ($template === 'login'): ?> aria-current="page"<?php endif; ?>>Zaloguj się</a></li>
+                    <?php else: ?>
+                        <li>
+                            <form method="post" action="/wyloguj">
+                                <input type="hidden" name="csrfToken" value="<?= htmlspecialchars($csrfToken) ?>">
+                                <button type="submit">Wyloguj się</button>
+                            </form>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="wrap <?= $template === 'home' ? 'home-page' : 'content-page' ?>" id="content" tabindex="-1">
         <details class="demo-notice">
-            <summary>Podgląd szablonów: formularze są wyłączone.</summary>
-            <p>Dane są demonstracyjne. Konta, uprawnienia i zapis nie są jeszcze obsługiwane.</p>
+            <summary>Podgląd: większość formularzy jest jeszcze wyłączona.</summary>
+            <p>Ogłoszenia i zgłoszenia są demonstracyjne. Działa zakładanie konta, logowanie i wylogowanie.</p>
         </details>
         <?php require $templatePath; ?>
     </main>
