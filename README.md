@@ -2,6 +2,8 @@
 
 Aplikacja o rzeczach zgubionych i znalezionych na kampusach Czyżyny i Warszawska Politechniki Krakowskiej.
 
+Projekt studencki z przedmiotu [Projektowanie aplikacji internetowych](https://ii.pk.edu.pl/~awidlak/subject/16).
+
 ## Szybki start
 
 ```bash
